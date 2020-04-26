@@ -65,3 +65,51 @@
 
 1587668154 c:\users\acer\desktop\projekat-itkompanija-master\projekat-itkompanija-master\projekat\it kompanija\rashodi.hpp
 
+1587940301 source:c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\main.cpp
+	<iostream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+
+1587918922 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\kompanija.hpp
+
+1587935453 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\kancelarije.hpp
+	"HardverskaOprema.hpp"
+
+1587940280 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\timovi.hpp
+	"Radnik.hpp"
+
+1587935973 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+
+1587935453 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\softverskialati.hpp
+
+1587935973 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\oprema.hpp
+
+1587935610 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\klijenti.hpp
+
+1587935973 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\prihodi.hpp
+
+1587935973 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\rashodi.hpp
+
+1587934155 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\radnik.hpp
+	"Kvalifikacije.hpp"
+
+1587926449 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\kvalifikacije.hpp
+
+1587938185 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1587935371 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\hardverskaoprema.hpp
+
