@@ -113,3 +113,103 @@
 
 1587935371 c:\users\acer\desktop\projekat-itkompanija-master-20200426t152241z-001\projekat-itkompanija-master\projekat\it kompanija\hardverskaoprema.hpp
 
+1588281388 source:c:\users\acer\desktop\lalala\main.cpp
+	<iostream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+	<vector>
+
+1588191961 c:\users\acer\desktop\lalala\kompanija.hpp
+
+1588191961 c:\users\acer\desktop\lalala\kancelarije.hpp
+	"HardverskaOprema.hpp"
+
+1588191961 c:\users\acer\desktop\lalala\hardverskaoprema.hpp
+
+1588199520 c:\users\acer\desktop\lalala\radnik.hpp
+	"Kvalifikacije.hpp"
+
+1588191961 c:\users\acer\desktop\lalala\kvalifikacije.hpp
+
+1588193945 c:\users\acer\desktop\lalala\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1588191961 c:\users\acer\desktop\lalala\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+
+1588281524 c:\users\acer\desktop\lalala\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1588191961 c:\users\acer\desktop\lalala\softverskialati.hpp
+
+1588191961 c:\users\acer\desktop\lalala\oprema.hpp
+
+1588191961 c:\users\acer\desktop\lalala\klijenti.hpp
+
+1588191961 c:\users\acer\desktop\lalala\prihodi.hpp
+
+1588191961 c:\users\acer\desktop\lalala\rashodi.hpp
+
+1588281388 source:c:\users\acer\desktop\projekat verzija x\main.cpp
+	<iostream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+	<vector>
+
+1588191961 c:\users\acer\desktop\projekat verzija x\kompanija.hpp
+
+1588191961 c:\users\acer\desktop\projekat verzija x\kancelarije.hpp
+	"HardverskaOprema.hpp"
+
+1588191961 c:\users\acer\desktop\projekat verzija x\hardverskaoprema.hpp
+
+1588199520 c:\users\acer\desktop\projekat verzija x\radnik.hpp
+	"Kvalifikacije.hpp"
+
+1588191961 c:\users\acer\desktop\projekat verzija x\kvalifikacije.hpp
+
+1588193945 c:\users\acer\desktop\projekat verzija x\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1588191961 c:\users\acer\desktop\projekat verzija x\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+
+1588281524 c:\users\acer\desktop\projekat verzija x\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1588191961 c:\users\acer\desktop\projekat verzija x\softverskialati.hpp
+
+1588191961 c:\users\acer\desktop\projekat verzija x\oprema.hpp
+
+1588191961 c:\users\acer\desktop\projekat verzija x\klijenti.hpp
+
+1588191961 c:\users\acer\desktop\projekat verzija x\prihodi.hpp
+
+1588191961 c:\users\acer\desktop\projekat verzija x\rashodi.hpp
+

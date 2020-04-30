@@ -75,6 +75,25 @@ public :
 
         return rejting;
     }
+
+    dodajRealizovaneProjekte(int x){
+        realizovaniProjekti+=x;
+        ukupnoProjekata+=x;
+    }
+
+    dodajNerealizovaneProjekte(int x){
+        ukupnoProjekata+=x;
+    }
+
+    void Bonus(double x){
+        if(x>0.8){
+            koefPlata*=1.2;
+
+        }
+    }
+
+
+
 };
 
 

@@ -1,19 +1,21 @@
 #ifndef TIMOVI_HPP_INCLUDED
 #define TIMOVI_HPP_INCLUDED
 #include "Radnik.hpp"
+#include <vector>
 class Timovi
 {
 protected:
     string naziv;
-    Radnik r[];
+    vector<Radnik> r;
 public:
     Timovi()
     {
         naziv="Nema naziv";
     }
-    Timovi(string Naziv)
+    Timovi(string Naziv, vector<Radnik> R)
     {
         naziv=Naziv;
+        r=R;
     }
     Timovi(const Timovi& t)
     {
@@ -26,25 +28,22 @@ public:
         return naziv;
     }
 
-    Radnik* getRadnici()
+    vector<Radnik> getRadnici()
     {
         return r;
     }
 
 
-    void setNaziv(string Naziv)
+    void setRadnici(vector<Radnik> R)
     {
-        naziv=Naziv;
+        r=R;
+
+    }
+    int brojClanova(){
+        return r.size();
     }
 
-    void setRadnici(Radnik* R)
-    {
-        int velicinaNiza =sizeof(R)/sizeof(R[0]);
-        for (int i = 0; i < velicinaNiza; i++)
-        {
-            r[i]=R[i];
-        }
-    }
+
 };
 
 

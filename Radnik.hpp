@@ -2,37 +2,40 @@
 #define RADNICI_HPP_INCLUDED
 #include "Kvalifikacije.hpp"
 
-enum  Pozicija{junior,medior,senior};
+enum  Pozicija {junior,medior,senior};
 
-class Radnik{
+class Radnik
+{
 
-    protected:
-        string ime;
-        string prezime;
-        string adresa;
-        Kvalifikacije k;
-        Pozicija pozicija;
-        double koefPlata;
+protected:
+    string ime;
+    string prezime;
+    string adresa;
+    Kvalifikacije k;
+    Pozicija pozicija;
+    double koefPlata;
+    double plata;
 
+public:
+    Radnik(): k()
+    {
+        ime="Nepoznato";
+        prezime="Nepoznato";
+        adresa="Nepoznato";
+        koefPlata=0;
+        pozicija=junior;
 
-    public:
-        Radnik(): k(){
-         ime="Nepoznato";
-         prezime="Nepoznato";
-         adresa="Nepoznato";
-         koefPlata=0;
-         pozicija=junior;
+    }
+    Radnik(string Ime,string Prezime,string Adresa, Kvalifikacije K,Pozicija Poz, double KoefPlata) : k(K)
+    {
+        ime=Ime;
+        prezime=Prezime;
+        adresa=Adresa;
+        k=K;
+        pozicija=Poz;
+        koefPlata=KoefPlata;
 
-        }
-     Radnik(string Ime,string Prezime,string Adresa, Kvalifikacije K,Pozicija Poz, double KoefPlata) : k(K){
-         ime=Ime;
-         prezime=Prezime;
-         adresa=Adresa;
-         k=K;
-         pozicija=Poz;
-         koefPlata=KoefPlata;
-
-     }
+    }
     Radnik(const Radnik& r)
     {
         ime=r.ime;
@@ -41,50 +44,71 @@ class Radnik{
         k=r.k;
         pozicija=r.pozicija;
         koefPlata=r.koefPlata;
-
     }
-     string getIme(){
+    string getIme()
+    {
         return ime;
-     }
-     string getPrezime(){
+    }
+    string getPrezime()
+    {
         return prezime;
-     }
-      string getAdresa(){
+    }
+    string getAdresa()
+    {
         return adresa;
-     }
-     Pozicija getPozicija(){
+    }
+    Pozicija getPozicija()
+    {
         return pozicija;
-     }
-     Kvalifikacije getKvalifikacije(){
+    }
+    Kvalifikacije getKvalifikacije()
+    {
         return k;
-     }
-     double getKoefPlata(){
+    }
+    double getKoefPlata()
+    {
         return koefPlata;
-     }
+    }
+    double getPlata()
+    {
+        return plata;
+    }
 
-
-      void setIme(string Ime){
+    void setIme(string Ime)
+    {
         ime=Ime;
-      }
-       void setPrezime(string Prezime){
+    }
+    void setPrezime(string Prezime)
+    {
         prezime=Prezime;
-      }
-       void setAdresa(string Adresa){
+    }
+    void setAdresa(string Adresa)
+    {
         adresa=Adresa;
-      }
-      void setKvalifikacije(Kvalifikacije K){
-        k=K;
-      }
-      void setPozicija(Pozicija Poz){
-        pozicija=Poz;
-      }
-      void setKoefPlata(double KoefPlata){
-        koefPlata=KoefPlata;
-      }
+    }
 
-      double plata(int radnisati){
-        return koefPlata*radnisati;
-      }
+    void setKvalifikacije(Kvalifikacije K)
+    {
+        k=K;
+    }
+
+    void setPozicija(Pozicija Poz)
+    {
+        pozicija=Poz;
+    }
+    void setKoefPlata(double KoefPlata)
+    {
+        koefPlata=KoefPlata;
+    }
+
+
+    void IzracunajPlatu (int radnisati)
+    {
+        if(radnisati>180)
+            koefPlata*=1.2;
+
+       plata = koefPlata*radnisati;
+    }
 
 };
 
