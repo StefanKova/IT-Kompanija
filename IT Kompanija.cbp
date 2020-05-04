@@ -35,6 +35,7 @@
 		<Unit filename="HardverskaOprema.hpp" />
 		<Unit filename="Kancelarije.hpp" />
 		<Unit filename="Klijenti.hpp" />
+		<Unit filename="Klijenti.txt" />
 		<Unit filename="Kompanija.hpp" />
 		<Unit filename="Kvalifikacije.hpp" />
 		<Unit filename="Oprema.hpp" />

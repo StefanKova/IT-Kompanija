@@ -76,12 +76,12 @@ public :
         return rejting;
     }
 
-    dodajRealizovaneProjekte(int x){
+   void dodajRealizovaneProjekte(int x){
         realizovaniProjekti+=x;
         ukupnoProjekata+=x;
     }
 
-    dodajNerealizovaneProjekte(int x){
+   void dodajNerealizovaneProjekte(int x){
         ukupnoProjekata+=x;
     }
 

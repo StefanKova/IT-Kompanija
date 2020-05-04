@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-/* Dodavanje klasa u main */
+
 #include "Kompanija.hpp"
 #include "Kancelarije.hpp"
 #include "Radnik.hpp"
@@ -15,7 +15,27 @@ using namespace std;
 #include "Kvalifikacije.hpp"
 #include "VodjaTima.hpp"
 #include <vector>
-/* Kraj dodavanja klasa u main */
+#include <iostream>
+#include <fstream>
+
+void citajTxt(string nazivFajla)
+{
+    string linija;
+    ifstream fajl (nazivFajla.c_str());
+    if (fajl.is_open())
+    {
+        while ( getline (fajl,linija) )
+        {
+            cout << linija << '\n';
+        }
+        fajl.close();
+    }
+
+    else
+        cout << "Neuspesno otvoren fajl";
+
+}
+
 
 
 int main()
@@ -110,6 +130,24 @@ int main()
 
     //Od konkretnih funkcionalosti program ce posedovati npr, izracunavanje plate svakog pojedinacnog radnika, izracunavanje kranje dobiti u svakom trenutku, izracunavanjee dobiti u buducnosti ako firma nastavi u odredjenom smeru, upozoravati ako je odredjena licenca za softver pri kraju, ako klijenat kasni sa uplacivanjem, ako vodja tima ima los rejting ili ima rejting iznad proseka da se nagradi s odredjenim bonusima. Bukvalno ce raditi sve automatizovaano za jednu IT-firmu da se ne bi desilo da ista promakne i da ta firma ide u svom najbolljem mogucem smeru.
 
+
+    Klijenti Samsung("samsungg","Amerika","44455","samo@ffice.com",veliko);
+    Klijenti LG("LG","Amerika","22222","LG@tralaala.com",malo);
+    Klijenti Nokia("Nokia","Daleka proslost","231231231","nekadbilapopularna@proslost.com",veliko);
+
+    if(!Samsung.PostojiKlijentUFajlu())
+        Samsung.DodajKlijentaUFajl();
+
+     if(!LG.PostojiKlijentUFajlu())
+        LG.DodajKlijentaUFajl();
+
+     if(!Nokia.PostojiKlijentUFajlu())
+        Nokia.DodajKlijentaUFajl();
+
+
+
+
+    citajTxt("Klijenti.txt");
 
 
 

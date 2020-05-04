@@ -163,7 +163,7 @@
 
 1588191961 c:\users\acer\desktop\lalala\rashodi.hpp
 
-1588281388 source:c:\users\acer\desktop\projekat verzija x\main.cpp
+1588547505 source:c:\users\acer\desktop\projekat verzija x\main.cpp
 	<iostream>
 	"Kompanija.hpp"
 	"Kancelarije.hpp"
@@ -178,6 +178,8 @@
 	"Kvalifikacije.hpp"
 	"VodjaTima.hpp"
 	<vector>
+	<iostream>
+	<fstream>
 
 1588191961 c:\users\acer\desktop\projekat verzija x\kompanija.hpp
 
@@ -199,7 +201,7 @@
 	"Timovi.hpp"
 	"VodjaTima.hpp"
 
-1588281524 c:\users\acer\desktop\projekat verzija x\vodjatima.hpp
+1588525144 c:\users\acer\desktop\projekat verzija x\vodjatima.hpp
 	"Radnik.hpp"
 	"Timovi.hpp"
 
@@ -207,7 +209,9 @@
 
 1588191961 c:\users\acer\desktop\projekat verzija x\oprema.hpp
 
-1588191961 c:\users\acer\desktop\projekat verzija x\klijenti.hpp
+1588547503 c:\users\acer\desktop\projekat verzija x\klijenti.hpp
+	<iostream>
+	<fstream>
 
 1588191961 c:\users\acer\desktop\projekat verzija x\prihodi.hpp
 
