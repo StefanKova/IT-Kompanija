@@ -37,6 +37,7 @@ void citajTxt(string nazivFajla)
 }
 
 
+int Radnik::ukupnoZaposlenih=0;
 
 int main()
 {
@@ -138,10 +139,10 @@ int main()
     if(!Samsung.PostojiKlijentUFajlu())
         Samsung.DodajKlijentaUFajl();
 
-     if(!LG.PostojiKlijentUFajlu())
+    if(!LG.PostojiKlijentUFajlu())
         LG.DodajKlijentaUFajl();
 
-     if(!Nokia.PostojiKlijentUFajlu())
+    if(!Nokia.PostojiKlijentUFajlu())
         Nokia.DodajKlijentaUFajl();
 
 
@@ -149,6 +150,12 @@ int main()
 
     citajTxt("Klijenti.txt");
 
-
+    cout << "Ukupno zaposlenih(primer staticnog polja): " << Radnik::ukupnoZaposlenih<< endl;
+    cout<<"Radnik:"<<endl;
+    cout<<Stefan<<endl;
+    cout<<"Vodja:"<<endl;
+    cout<<StefanVT1<<endl;
+    cout<<"Klijenat:"<<endl;
+    cout<<Samsung<<endl;
 
 }

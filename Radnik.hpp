@@ -1,6 +1,7 @@
 #ifndef RADNICI_HPP_INCLUDED
 #define RADNICI_HPP_INCLUDED
 #include "Kvalifikacije.hpp"
+#include <iostream>
 
 enum  Pozicija {junior,medior,senior};
 
@@ -17,6 +18,7 @@ protected:
     double plata;
 
 public:
+    static int ukupnoZaposlenih;
     Radnik(): k()
     {
         ime="Nepoznato";
@@ -24,7 +26,6 @@ public:
         adresa="Nepoznato";
         koefPlata=0;
         pozicija=junior;
-
     }
     Radnik(string Ime,string Prezime,string Adresa, Kvalifikacije K,Pozicija Poz, double KoefPlata) : k(K)
     {
@@ -34,6 +35,7 @@ public:
         k=K;
         pozicija=Poz;
         koefPlata=KoefPlata;
+        ukupnoZaposlenih++;
 
     }
     Radnik(const Radnik& r)
@@ -107,9 +109,37 @@ public:
         if(radnisati>180)
             koefPlata*=1.2;
 
-       plata = koefPlata*radnisati;
+        plata = koefPlata*radnisati;
+    }
+
+    friend ostream& operator<<(ostream& izlaz, const Radnik& o)
+    {
+        string x;
+        if(o.pozicija==0)
+        {
+            x="junior";
+        }
+        if(o.pozicija==1)
+        {
+            x="medior";
+        }
+        if(o.pozicija==2)
+        {
+            x="senior";
+        }
+        izlaz<<"Ime radnika : "<<o.ime<<endl;
+        izlaz<<"Prezime radnika : "<<o.prezime<<endl;
+        izlaz<<"Adresa radnika je : "<<o.adresa<<endl;
+        izlaz<<"Kvalifikacije radnika : "<<endl<<o.k;
+        izlaz<<"Pozicija radnika : "<<x<<endl;
+        izlaz<<"Koeficijent plate radnika je : "<<o.koefPlata<<endl;
+        izlaz<<"Plata radnika je : "<<o.plata<<endl;
+
+        return izlaz;
+
     }
 
 };
+
 
 #endif // RADNICI_HPP_INCLUDED

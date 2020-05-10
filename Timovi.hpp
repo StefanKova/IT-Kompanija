@@ -39,8 +39,23 @@ public:
         r=R;
 
     }
-    int brojClanova(){
+    int brojClanova()const
+    {
         return r.size();
+    }
+
+        friend ostream& operator<<(ostream& izlaz, const Timovi& o)
+    {
+
+        izlaz<<"Naziv tima : "<<o.naziv<<endl;
+        /* Profesorka ovaaj deo koda bas nisam znao,  pokusavao sam da ga resim ali nisam uspeo
+        for(int i=0;i<o.brojClanova();i++){
+
+            izlaz<<o.r[i]<<endl;
+        } */
+
+        return izlaz;
+
     }
 
 

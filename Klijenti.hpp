@@ -120,6 +120,31 @@ public:
 
         return true;
     }
+    friend ostream& operator<<(ostream& izlaz, const Klijenti& o)
+    {
+        string x;
+        if(o.tip==0)
+        {
+            x="malo";
+        }
+        if(o.tip==1)
+        {
+            x="srednje";
+        }
+        if(o.tip==2)
+        {
+            x="veliko";
+        }
+        izlaz<<"Naziv : "<<o.naziv<<endl;
+        izlaz<<"Adresa : "<<o.adresa<<endl;
+        izlaz<<"Kontakt telefon"<<o.kontaktTelefon<<endl;
+        izlaz<<"E-mail : "<<o.email<<endl;
+        izlaz<<"Tip preduzeca : "<<x<<endl;
+
+
+        return izlaz;
+
+    }
 
 };
 
