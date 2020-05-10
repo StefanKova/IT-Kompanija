@@ -40,6 +40,17 @@ class Kompanija{
     void Informacije()const{
         cout<<"Kompanija se zove"<<naziv<<", osnovana je"<<godinaOsnivanja<<", pristupiti na"<<www<<endl;
     }
+        friend ostream& operator<<(ostream& izlaz, const Kompanija& o)
+    {
+
+        izlaz<<"Naziv kompanije : "<<o.naziv<<endl;
+        izlaz<<"Godina osnivanja je : "<<o.godinaOsnivanja<<endl;
+        izlaz<<"Internet sajt je : "<<o.www<<endl;
+
+        return izlaz;
+
+    }
+
 };
 
 

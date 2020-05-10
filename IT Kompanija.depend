@@ -272,7 +272,7 @@
 
 1589120098 c:\users\acer\desktop\111\it-kompanija-master\rashodi.hpp
 
-1589128798 source:c:\users\stefaaman\desktop\111\it-kompanija-master\main.cpp
+1589136577 source:c:\users\stefaaman\desktop\111\it-kompanija-master\main.cpp
 	<iostream>
 	"Kompanija.hpp"
 	"Kancelarije.hpp"
@@ -290,7 +290,7 @@
 	<iostream>
 	<fstream>
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\kompanija.hpp
+1589136577 c:\users\stefaaman\desktop\111\it-kompanija-master\kompanija.hpp
 
 1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\kancelarije.hpp
 	"HardverskaOprema.hpp"
@@ -303,7 +303,7 @@
 
 1589131287 c:\users\stefaaman\desktop\111\it-kompanija-master\kvalifikacije.hpp
 
-1589128413 c:\users\stefaaman\desktop\111\it-kompanija-master\timovi.hpp
+1589136577 c:\users\stefaaman\desktop\111\it-kompanija-master\timovi.hpp
 	"Radnik.hpp"
 	<vector>
 
