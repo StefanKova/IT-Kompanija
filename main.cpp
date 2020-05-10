@@ -158,7 +158,7 @@ int main()
     cout<<"Klijenat:"<<endl;
     cout<<Samsung<<endl;
 
-    Kompanija kompanija("JJZ",1800,"www.jjzmaj.rs");
+    Kompanija kompanija("KompanijaA",1800,"www.komapanijaA.rs");
     cout<<"Kompanija"<<endl;
     cout<<kompanija<<endl;
 
