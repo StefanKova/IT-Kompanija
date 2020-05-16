@@ -217,7 +217,7 @@
 
 1588191961 c:\users\acer\desktop\projekat verzija x\rashodi.hpp
 
-1589124371 source:c:\users\acer\desktop\111\it-kompanija-master\main.cpp
+1589625258 source:c:\users\acer\desktop\111\it-kompanija-master\main.cpp
 	<iostream>
 	"Kompanija.hpp"
 	"Kancelarije.hpp"
@@ -240,7 +240,8 @@
 1589120098 c:\users\acer\desktop\111\it-kompanija-master\kancelarije.hpp
 	"HardverskaOprema.hpp"
 
-1589120098 c:\users\acer\desktop\111\it-kompanija-master\hardverskaoprema.hpp
+1589624688 c:\users\acer\desktop\111\it-kompanija-master\hardverskaoprema.hpp
+	"Oprema.hpp"
 
 1589124665 c:\users\acer\desktop\111\it-kompanija-master\radnik.hpp
 	"Kvalifikacije.hpp"
@@ -260,9 +261,10 @@
 	"Radnik.hpp"
 	"Timovi.hpp"
 
-1589120098 c:\users\acer\desktop\111\it-kompanija-master\softverskialati.hpp
+1589624712 c:\users\acer\desktop\111\it-kompanija-master\softverskialati.hpp
+	"Oprema.hpp"
 
-1589120098 c:\users\acer\desktop\111\it-kompanija-master\oprema.hpp
+1589625402 c:\users\acer\desktop\111\it-kompanija-master\oprema.hpp
 
 1589124745 c:\users\acer\desktop\111\it-kompanija-master\klijenti.hpp
 	<iostream>
@@ -272,7 +274,7 @@
 
 1589120098 c:\users\acer\desktop\111\it-kompanija-master\rashodi.hpp
 
-1589136577 source:c:\users\stefaaman\desktop\111\it-kompanija-master\main.cpp
+1589643228 source:c:\users\korisnik\desktop\111\it-kompanija-master\main.cpp
 	<iostream>
 	"Kompanija.hpp"
 	"Kancelarije.hpp"
@@ -290,41 +292,99 @@
 	<iostream>
 	<fstream>
 
-1589136577 c:\users\stefaaman\desktop\111\it-kompanija-master\kompanija.hpp
+1589084098 c:\users\korisnik\desktop\111\it-kompanija-master\kompanija.hpp
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\kancelarije.hpp
+1589084098 c:\users\korisnik\desktop\111\it-kompanija-master\kancelarije.hpp
 	"HardverskaOprema.hpp"
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\hardverskaoprema.hpp
+1589636287 c:\users\korisnik\desktop\111\it-kompanija-master\hardverskaoprema.hpp
+	"Oprema.hpp"
 
-1589127584 c:\users\stefaaman\desktop\111\it-kompanija-master\radnik.hpp
+1589637928 c:\users\korisnik\desktop\111\it-kompanija-master\oprema.hpp
+
+1589088664 c:\users\korisnik\desktop\111\it-kompanija-master\radnik.hpp
 	"Kvalifikacije.hpp"
 	<iostream>
 
-1589131287 c:\users\stefaaman\desktop\111\it-kompanija-master\kvalifikacije.hpp
+1589635253 c:\users\korisnik\desktop\111\it-kompanija-master\kvalifikacije.hpp
 
-1589136577 c:\users\stefaaman\desktop\111\it-kompanija-master\timovi.hpp
+1589088376 c:\users\korisnik\desktop\111\it-kompanija-master\timovi.hpp
 	"Radnik.hpp"
 	<vector>
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\projekti.hpp
+1589084098 c:\users\korisnik\desktop\111\it-kompanija-master\projekti.hpp
 	"Timovi.hpp"
 	"VodjaTima.hpp"
 
-1589130606 c:\users\stefaaman\desktop\111\it-kompanija-master\vodjatima.hpp
+1589088376 c:\users\korisnik\desktop\111\it-kompanija-master\vodjatima.hpp
 	"Radnik.hpp"
 	"Timovi.hpp"
-	"Kvalifikacije.hpp"
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\softverskialati.hpp
+1589643276 c:\users\korisnik\desktop\111\it-kompanija-master\softverskialati.hpp
+	"Oprema.hpp"
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\oprema.hpp
-
-1589128702 c:\users\stefaaman\desktop\111\it-kompanija-master\klijenti.hpp
+1589635271 c:\users\korisnik\desktop\111\it-kompanija-master\klijenti.hpp
 	<iostream>
 	<fstream>
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\prihodi.hpp
+1589084098 c:\users\korisnik\desktop\111\it-kompanija-master\prihodi.hpp
 
-1589125893 c:\users\stefaaman\desktop\111\it-kompanija-master\rashodi.hpp
+1589084098 c:\users\korisnik\desktop\111\it-kompanija-master\rashodi.hpp
+
+1589646828 source:c:\users\stefaaman\documents\111\it-kompanija-master\main.cpp
+	<iostream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1589087698 c:\users\stefaaman\documents\111\it-kompanija-master\kompanija.hpp
+
+1589087698 c:\users\stefaaman\documents\111\it-kompanija-master\kancelarije.hpp
+	"HardverskaOprema.hpp"
+
+1589639887 c:\users\stefaaman\documents\111\it-kompanija-master\hardverskaoprema.hpp
+	"Oprema.hpp"
+
+1589641528 c:\users\stefaaman\documents\111\it-kompanija-master\oprema.hpp
+
+1589092264 c:\users\stefaaman\documents\111\it-kompanija-master\radnik.hpp
+	"Kvalifikacije.hpp"
+	<iostream>
+
+1589638853 c:\users\stefaaman\documents\111\it-kompanija-master\kvalifikacije.hpp
+
+1589091976 c:\users\stefaaman\documents\111\it-kompanija-master\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1589087698 c:\users\stefaaman\documents\111\it-kompanija-master\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+
+1589091976 c:\users\stefaaman\documents\111\it-kompanija-master\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1589646876 c:\users\stefaaman\documents\111\it-kompanija-master\softverskialati.hpp
+	"Oprema.hpp"
+
+1589638871 c:\users\stefaaman\documents\111\it-kompanija-master\klijenti.hpp
+	<iostream>
+	<fstream>
+
+1589087698 c:\users\stefaaman\documents\111\it-kompanija-master\prihodi.hpp
+
+1589087698 c:\users\stefaaman\documents\111\it-kompanija-master\rashodi.hpp
 

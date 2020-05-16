@@ -101,91 +101,32 @@ public:
 
     void imaKvalifikacije()
     {
-        if(html=true)
+        if(html==true)
         {
             cout<<"HTML"<<endl;
         }
-        if(c_=true)
+        if(c_==true)
         {
             cout<<"C"<<endl;
         }
-        if(javascript=true)
+        if(javascript==true)
         {
             cout<<"JAVASCRIPTS"<<endl;
         }
-        if(java=true)
+        if(java==true)
         {
             cout<<"JAVA"<<endl;
         }
-        if(css=true)
+        if(css==true)
         {
             cout<<"CSS"<<endl;
         }
-        if(bazePodataka=true)
+        if(bazePodataka==true)
         {
             cout<<"BAZE"<<endl;
         }
 
         cout<<ostalo<<endl;
-    }
-
-        friend ostream& operator<<(ostream& izlaz, const Kvalifikacije& o)
-    {
-        string x;
-        if(o.html==true){
-            x="Da";
-        }
-        if(o.html==false){
-            x="Ne";
-        }
-         string y;
-        if(o.c_==true){
-            y="Da";
-        }
-        if(o.c_==false){
-            y="Ne";
-        }
-            string c;
-        if(o.javascript==true){
-            c="Da";
-        }
-        if(o.javascript==false){
-            c="Ne";
-        }
-        string a;
-        if(o.java==true){
-            a="Da";
-        }
-        if(o.java==false){
-            a="Ne";
-        }
-        string b;
-        if(o.css==true){
-            b="Da";
-        }
-        if(o.css==false){
-            b="Ne";
-        }
-        string e;
-        if(o.bazePodataka==true){
-            e="Da";
-        }
-        if(o.bazePodataka==false){
-            e="Ne";
-        }
-
-
-
-        izlaz<<"Da li radnik zna HTML : "<<x<<endl;
-        izlaz<<"Da li radnik zna C : "<<y<<endl;
-        izlaz<<"Da li radnik zna JAVASCRIPT : "<<c<<endl;
-        izlaz<<"Da li radnik zna JAVA : "<<a<<endl;
-        izlaz<<"Da li radnik zna CSS : "<<b<<endl;
-        izlaz<<"Da li radnik zna Baze PODATAKA : "<<e<<endl;
-        izlaz<<"Ostatalo znanje radnika : "<<o.ostalo<<endl;
-
-        return izlaz;
-
     }
 
 };

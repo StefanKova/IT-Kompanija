@@ -5,11 +5,44 @@ class Oprema
 
 protected:
     string naziv;
-    string cena;
-
+    bool vrsta;
 public:
 
+Oprema(string Naziv, bool V){
+    naziv=Naziv;
+    vrsta=V;
+}
 
+
+virtual void VrstaOpreme(){
+
+    if(vrsta)
+    {
+        cout<<"Ovo je softver";
+    }
+    if(vrsta==false)
+    {
+        cout<<"Ovo je hardver";
+    }
+}
+
+    friend ostream& operator<<(ostream& izlaz, const Oprema& o)
+    {
+        string x;
+        if(o.vrsta==0){
+            x="Softver";
+        }
+        if(o.vrsta==1){
+            x="Hardver";
+        }
+
+        izlaz<<"Naziv : "<<o.naziv<<endl;
+        izlaz<<"Vrsta opreme : "<<x<<endl;
+
+        return izlaz;
+
+    }
+    bool getVrsta(){return vrsta;}
 
 };
 

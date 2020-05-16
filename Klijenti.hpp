@@ -99,7 +99,7 @@ public:
         {
             while(getline(fajl, linija))
             {
-                nazivIzFajla="";
+                nazivIzFajla=" ";
                 for(int i = 0; i < linija.size(); i++)
                 {
                     if(linija[i] == ';')
@@ -136,11 +136,8 @@ public:
             x="veliko";
         }
         izlaz<<"Naziv : "<<o.naziv<<endl;
-        izlaz<<"Adresa : "<<o.adresa<<endl;
-        izlaz<<"Kontakt telefon"<<o.kontaktTelefon<<endl;
-        izlaz<<"E-mail : "<<o.email<<endl;
         izlaz<<"Tip preduzeca : "<<x<<endl;
-
+        izlaz<<"E-mail : "<<o.email<<endl;
 
         return izlaz;
 

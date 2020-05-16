@@ -37,7 +37,6 @@ void citajTxt(string nazivFajla)
 }
 
 
-int Radnik::ukupnoZaposlenih=0;
 
 int main()
 {
@@ -151,15 +150,33 @@ int main()
     citajTxt("Klijenti.txt");
 
     cout << "Ukupno zaposlenih(primer staticnog polja): " << Radnik::ukupnoZaposlenih<< endl;
-    cout<<"Radnik:"<<endl;
+
     cout<<Stefan<<endl;
-    cout<<"Vodja:"<<endl;
     cout<<StefanVT1<<endl;
-    cout<<"Klijenat:"<<endl;
     cout<<Samsung<<endl;
 
-    Kompanija kompanija("KompanijaA",1800,"www.komapanijaA.rs");
-    cout<<"Kompanija"<<endl;
-    cout<<kompanija<<endl;
 
+    for(int i=0; i<10;i++){
+    cout<<endl;};
+    HardverskaOprema h(10, 2, true, "Hardver", true);
+    h.VrstaOpreme();
+    cout<<endl;
+
+
+    Oprema o("Aparat za kafu",false);
+    SoftverskiAlati s("Alat", "Verzija 2.0", true);
+    SoftverskiAlati s1("alat", "Verzija 1.0", true);
+    s.dodavanjeOpreme(s);
+    s.dodavanjeOpreme(s1);
+    s.ispisOpreme();
+    s.uklanjanjeOpreme();
+    s.ispisOpreme();
+
+    cout<<endl<<endl;
+    cout<<o<<endl;
+    s.pretraga();
+
+
+
+return 0;
 }

@@ -2,7 +2,6 @@
 #define VODJATIMA_HPP_INCLUDED
 #include "Radnik.hpp"
 #include "Timovi.hpp"
-#include "Kvalifikacije.hpp"
 
 class VodjaTima: public Radnik
 {
@@ -99,28 +98,8 @@ public :
 
     friend ostream& operator<<(ostream& izlaz, const VodjaTima& v)
     {
-        string x;
-        if(v.pozicija==0)
-        {
-            x="junior";
-        }
-        if(v.pozicija==1)
-        {
-            x="medior";
-        }
-        if(v.pozicija==2)
-        {
-            x="senior";
-        }
 
-        izlaz<<"Vodja Tima: "<<v.ime<<endl;
-        izlaz<<"Prezime vodje : "<<v.prezime<<endl;
-        izlaz<<"Adresa vodje je : "<<v.adresa<<endl;
-        izlaz<<"Kvalifikacije vodje : "<<endl<<v.k;
-        izlaz<<"Pozicija vodje : "<<x<<endl;
-        izlaz<<"Koeficijent plate vodje je : "<<v.koefPlata<<endl;
-        izlaz<<"Plata vodje je : "<<v.plata<<endl;
-        izlaz<<v.tim;
+        izlaz<<"Vodja Tima: "<<v.ime<<" "<<v.prezime<<" "<<endl;
         izlaz<<"Ukupno projekata: "<<v.ukupnoProjekata<<" "<<endl;
         izlaz<<"Realizovani projekti: "<<v.realizovaniProjekti<<endl;
 

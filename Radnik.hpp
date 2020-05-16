@@ -129,17 +129,13 @@ public:
         }
         izlaz<<"Ime radnika : "<<o.ime<<endl;
         izlaz<<"Prezime radnika : "<<o.prezime<<endl;
-        izlaz<<"Adresa radnika je : "<<o.adresa<<endl;
-        izlaz<<"Kvalifikacije radnika : "<<endl<<o.k;
-        izlaz<<"Pozicija radnika : "<<x<<endl;
-        izlaz<<"Koeficijent plate radnika je : "<<o.koefPlata<<endl;
-        izlaz<<"Plata radnika je : "<<o.plata<<endl;
+        izlaz<<"Znanje radnika : "<<x<<endl;
 
         return izlaz;
 
     }
 
 };
-
+int Radnik::ukupnoZaposlenih=0;
 
 #endif // RADNICI_HPP_INCLUDED
