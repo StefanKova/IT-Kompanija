@@ -166,7 +166,9 @@ int main()
     Oprema o("Aparat za kafu",false);
     SoftverskiAlati s("Alat", "Verzija 2.0", true);
     SoftverskiAlati s1("alat", "Verzija 1.0", true);
-    s.dodavanjeOpreme(s);
+
+
+    /*s.dodavanjeOpreme(s);
     s.dodavanjeOpreme(s1);
     s.ispisOpreme();
     s.uklanjanjeOpreme();
@@ -174,9 +176,164 @@ int main()
 
     cout<<endl<<endl;
     cout<<o<<endl;
-    s.pretraga();
+    s.pretraga();*/
+
+    //
+
+    Oprema* o2=&s;
+    o2->VrstaOpreme();
+
+    /*printf("Molimo Vas izaberite akciju!\n"
+        "1.Prikazi Kupce                          4.Dodaj Kupca                             7.Brisi Kupca\n"
+        "2.Prikazi Destinacije                    5.Dodaj Destinaciju                       8.Brisi Destinaciju\n"
+        "3.Prikazi Aranzmane                      6.Dodaj Aranzman                          9.Brisi Aranzman\n\n"
+
+        "0.Izlaz"
+
+                                        );
 
 
+
+    int n = -1;
+    while (n != 0)
+    {
+        printf("\n> ");
+
+        scanf("%d", &n);
+
+
+        switch (n)
+        {
+        case PrikaziKupce:
+            printf("Podaci o kupcima: \n");
+            PrikaziPodatkeOKupcima();
+
+            break;
+        case PrikaziDestinacije:
+            printf("Podaci o destinacijama: \n");
+             PrikaziPodatkeODestinacijama();
+            break;
+        case PrikaziAranzmane:
+            printf("Podaci o aranzmanima: \n");
+            PrikaziPodatkeOAranzmanu();
+            break;
+        case DodajKupca:
+            printf("Dodavanje novog kupca: \n");
+            DodajNovogKupca();
+            break;
+
+        case DodajDestinaciju:
+            printf("Dodavanje nove destinacije: \n");
+            DodajNovuDestinaciju();
+            break;
+
+        case DodajAranzman:
+            printf("Dodavanje novog aranzmana: \n");
+            DodajNoviAranzman();
+            break;
+
+        case BrisiKupca:
+            printf("Brisanje kupca: \n");
+            BrisanjeKupca();
+
+            break;
+
+        case BrisiDestinaciju:
+            printf("Brisanje destinacije: \n");
+            BrisanjeDestinacije();
+            break;
+
+        case BrisiAranzman:
+            printf("Brisanje aranzmana: \n");
+            break;
+        case 0:
+            printf("Izasli ste iz programa \n");
+            break;
+
+
+        default:
+            printf("Nepoznata akcija\n");
+        }
+    }
+*/
+    cout<<s;
+
+    Kancelarije k("Zmaj Jovina 1G",20);
+    k.dodavanjeOpreme(o);
+    cout<<k;
+
+    cout<<StefanVT1<<endl;
+    cout<<"rad";
+
+    cout<<timA.brojClanova();
+
+    //timA.dodavanjeRadnika(Stefan);
+
+    cout<<timB.brojClanova();
+
+
+    cout<<Stefan;
+    cout<<StefanVT1;
+
+    timA.clanoviTima();
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+
+    cout<<StefanVT1;
+
+    timA.dodavanjeRadnika(Stefan);
+
+    cout<<timA<<endl;
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+
+    cout<<StefanVT1<<endl; //neradii popraviti
+
+
+    cout<<timA<<endl;
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+     for(int i=0; i<10;i++){
+    cout<<endl;};
+
+
+
+
+    Oprema oprema22("neki naziv",true);
+
+
+    SoftverskiAlati sof("softver11","3.0",false);
+
+    cout<<sof;
+
+    HardverskaOprema har(12,4,true,"hardver",true);
+
+    cout<<har<<endl;
+
+
+    //ispis vodje ne radi u potrpunosti, ispis da li je hardver i softver takodje,zasto se oprema u kancelariji ispisuje kao adresa, ispis kompanije u potpunosti;
+     cout<<k;
 
 return 0;
 }

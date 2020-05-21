@@ -1,5 +1,8 @@
 #ifndef KOMPANIJA_HPP_INCLUDED
 #define KOMPANIJA_HPP_INCLUDED
+#include "Kancelarije.hpp"
+#include <map>
+#include <vector>
 
 
 class Kompanija{
@@ -8,6 +11,7 @@ class Kompanija{
         string naziv;
         int godinaOsnivanja;
         string www;
+        vector <Kancelarije> kancelarije;
     public:
         Kompanija(){
          naziv="Nepoznat";
@@ -40,6 +44,24 @@ class Kompanija{
     void Informacije()const{
         cout<<"Kompanija se zove"<<naziv<<", osnovana je"<<godinaOsnivanja<<", pristupiti na"<<www<<endl;
     }
+
+
+    void dodavanjeKancelarije(Kancelarije o)
+{
+    kancelarije.push_back(o);
+    cout<<"Kancelarija je dodata"<<endl;
+}
+
+     void uklanjanjeKancelarije()
+{
+    int x;
+    cout<<"Unesite broj pozicije kancelarije koje zelite da uklonite: ";
+    cin>>x;
+    kancelarije.erase(kancelarije.begin()+x);
+    cout<<"Kancelarija na mestu "<<x<<" je uklonjena"<<endl;
+}
+
+
 };
 
 

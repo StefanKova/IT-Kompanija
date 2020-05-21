@@ -388,3 +388,69 @@
 
 1589087698 c:\users\stefaaman\documents\111\it-kompanija-master\rashodi.hpp
 
+1590015250 source:c:\users\stefaa\desktop\it-kompanija-master\main.cpp
+	<iostream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590014262 c:\users\stefaa\desktop\it-kompanija-master\kompanija.hpp
+	"Kancelarije.hpp"
+	<map>
+	<vector>
+
+1590010674 c:\users\stefaa\desktop\it-kompanija-master\kancelarije.hpp
+	"HardverskaOprema.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	<map>
+	<vector>
+
+1590015428 c:\users\stefaa\desktop\it-kompanija-master\hardverskaoprema.hpp
+	"Oprema.hpp"
+
+1590015404 c:\users\stefaa\desktop\it-kompanija-master\oprema.hpp
+
+1590012358 c:\users\stefaa\desktop\it-kompanija-master\radnik.hpp
+	"Kvalifikacije.hpp"
+	<iostream>
+	"Radnik.hpp"
+	<vector>
+
+1590002002 c:\users\stefaa\desktop\it-kompanija-master\kvalifikacije.hpp
+
+1590014072 c:\users\stefaa\desktop\it-kompanija-master\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1590013717 c:\users\stefaa\desktop\it-kompanija-master\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+
+1590013795 c:\users\stefaa\desktop\it-kompanija-master\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1590015428 c:\users\stefaa\desktop\it-kompanija-master\softverskialati.hpp
+	"Oprema.hpp"
+
+1590002002 c:\users\stefaa\desktop\it-kompanija-master\klijenti.hpp
+	<iostream>
+	<fstream>
+
+1590002002 c:\users\stefaa\desktop\it-kompanija-master\prihodi.hpp
+
+1590002002 c:\users\stefaa\desktop\it-kompanija-master\rashodi.hpp
+

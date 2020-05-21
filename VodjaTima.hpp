@@ -98,7 +98,8 @@ public :
 
     friend ostream& operator<<(ostream& izlaz, const VodjaTima& v)
     {
-
+        izlaz<<(Radnik)v;
+        izlaz<<v.tim;
         izlaz<<"Vodja Tima: "<<v.ime<<" "<<v.prezime<<" "<<endl;
         izlaz<<"Ukupno projekata: "<<v.ukupnoProjekata<<" "<<endl;
         izlaz<<"Realizovani projekti: "<<v.realizovaniProjekti<<endl;

@@ -16,9 +16,9 @@ Oprema(string Naziv, bool V){
 
 virtual void VrstaOpreme(){
 
-    if(vrsta)
+    if(vrsta==true)
     {
-        cout<<"Ovo je softver";
+        cout<<"Ovo je softverski alat";
     }
     if(vrsta==false)
     {

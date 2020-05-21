@@ -7,7 +7,7 @@ class Projekti
 
 protected:
     string naziv;
-    Timovi timA;
+
     VodjaTima vtA;
     string rok;
     double budzet;

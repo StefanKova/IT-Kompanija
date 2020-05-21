@@ -2,6 +2,8 @@
 #define RADNICI_HPP_INCLUDED
 #include "Kvalifikacije.hpp"
 #include <iostream>
+#include "Radnik.hpp"
+#include <vector>
 
 enum  Pozicija {junior,medior,senior};
 

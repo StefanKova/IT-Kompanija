@@ -22,6 +22,8 @@ void VrstaOpreme()
     cout<<" i starost ove komponente je "<<starost<<" godine"<<endl;
 }
 
+int identifikacija(){return false;}
+
 };
 
 
