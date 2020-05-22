@@ -20,6 +20,7 @@ public:
     Timovi(const Timovi& t)
     {
         naziv=t.naziv;
+        r=t.r;
 
     }
 
@@ -62,7 +63,7 @@ public:
         izlaz<<"Clanovi tima su: "<<endl;
         for(auto it=o.r.begin(); it!=o.r.end(); it++ ){
 
-            izlaz<<"\t";
+
             izlaz<<*it<<endl;
         }
 
@@ -87,6 +88,48 @@ void uklanjanjeRadnika()
     r.erase(r.begin()+x);
     cout<<"Radnik na mestu "<<x<<" je uklonjen"<<endl;
 }
+
+        bool PostojiTimUFajlu()
+    {
+        string linija;
+        string nazivIzFajla;
+        ifstream fajl("Timovi.txt");
+        if (fajl.is_open())
+        {
+            while(getline(fajl, linija))
+            {
+                nazivIzFajla=" ";
+                for(int i = 0; i < linija.size(); i++)
+                {
+                    if(linija[i] == ';')
+                    {
+                        break;
+                    }
+                    nazivIzFajla += linija[i];
+                }
+                if(naziv == nazivIzFajla)
+                {
+                    fajl.close();
+                    return true;
+                }
+            }
+            fajl.close();
+            return false;
+        }
+
+        return true;
+    }
+
+
+      /*  void DodajTimUFajl()
+    {
+        ofstream fajl;
+       // fajl.open ("Timovi.txt", ios_base::app);
+        fajl <<getNaziv() << ";" << getRadnici() << ";" << endl;
+        fajl.close();
+    } */
+
+
 
 
 };

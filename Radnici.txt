@@ -1,0 +1,3 @@
+Stefan;Kovanusic;Zmaj Jovina; HTML  C  JAVASCRIPTS  JAVA  CSS  BAZE ostalo;senior;7000
+Dusaan;Kovacevic;21; HTML  C  JAVASCRIPTS  JAVA  CSS  BAZE ostalo;junior;5000
+Sava;Kovan;21; HTML  C  JAVASCRIPTS  JAVA  CSS  BAZE ostalo;junior;5500

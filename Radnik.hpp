@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Radnik.hpp"
 #include <vector>
+#include <iostream>
+#include <fstream>
 
 enum  Pozicija {junior,medior,senior};
 
@@ -20,6 +22,7 @@ protected:
     double plata;
 
 public:
+
     static int ukupnoZaposlenih;
     Radnik(): k()
     {
@@ -29,7 +32,7 @@ public:
         koefPlata=0;
         pozicija=junior;
     }
-    Radnik(string Ime,string Prezime,string Adresa, Kvalifikacije K,Pozicija Poz, double KoefPlata) : k(K)
+    Radnik(string Ime,string Prezime,string Adresa, Kvalifikacije K,Pozicija Poz, double KoefPlata)
     {
         ime=Ime;
         prezime=Prezime;
@@ -136,6 +139,55 @@ public:
         return izlaz;
 
     }
+
+        bool PostojiRadnikUFajlu()
+    {
+        string linija;
+        string nazivIzFajla;
+        ifstream fajl("Radnici.txt");
+        if (fajl.is_open())
+        {
+            while(getline(fajl, linija))
+            {
+                nazivIzFajla=" ";
+                for(int i = 0; i < linija.size(); i++)
+                {
+                    if(linija[i] == ';')
+                    {
+                        break;
+                    }
+                    nazivIzFajla += linija[i];
+                }
+                if(ime == nazivIzFajla)
+                {
+                    fajl.close();
+                    return true;
+                }
+            }
+            fajl.close();
+            return false;
+        }
+
+        return true;
+    }
+
+
+       void DodajRadnikaUFajl()
+    {
+        ofstream fajl;
+        fajl.open ("Radnici.txt", ios_base::app);
+        fajl <<getIme() << ";" << getPrezime() << ";" << getAdresa()<< ";" <<imaKvalifikacije()<<";"<< getPozicija()<<";"<<getPlata();
+        fajl.close();
+    }
+
+    string imaKvalifikacije(){
+
+        return k.imaKvalifikacije();
+
+    }
+
+
+
 
 };
 int Radnik::ukupnoZaposlenih=0;

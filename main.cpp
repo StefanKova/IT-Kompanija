@@ -1,4 +1,8 @@
 #include <iostream>
+#include <stdlib.h>
+#include <vector>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -14,9 +18,49 @@ using namespace std;
 #include "Rashodi.hpp"
 #include "Kvalifikacije.hpp"
 #include "VodjaTima.hpp"
-#include <vector>
-#include <iostream>
-#include <fstream>
+
+
+
+
+vector<string> splitSen(string str, char c=';')
+{
+    string w = "";
+    vector<string> v;
+    for (auto rem : str)
+    {
+        if (rem==c)
+        {
+            v.push_back(w);
+            w="";
+        }
+        else
+        {
+            w=w+rem;
+        }
+    }
+    v.push_back(w);
+
+    return v;
+}
+vector<string> split2(string NazivFajla)
+{
+    vector<string> v,line ;
+    string linija;
+    ifstream fajl (NazivFajla);
+    if (fajl.is_open())
+    {
+        while ( getline (fajl,linija) )
+        {
+            line=(splitSen(linija));
+            v.insert(v.end(), line.begin(), line.end());
+        }
+        fajl.close();
+    }
+
+    else
+        cout << "Neuspesno otvoren fajl";
+    return v;
+}
 
 void citajTxt(string nazivFajla)
 {
@@ -36,77 +80,290 @@ void citajTxt(string nazivFajla)
 
 }
 
+void IspisKlijenata(vector <string> klijenti)
+{
+
+    for(auto i=klijenti.begin(); i!= klijenti.end(); i++)
+    {
+        cout<<*i<<endl;
+
+    }
+
+
+
+}
+
+void IspisRadnika(vector <string> radnici)
+{
+    for(auto i=radnici.begin(); i!= radnici.end(); i++)
+    {
+        cout<<*i<<endl;
+
+    }
+
+}
+void IspisProjekata(vector <string> projekti)
+{
+
+    for(auto i=projekti.begin(); i!= projekti.end(); i++)
+    {
+
+        cout<<*i<<endl;
+
+    }
+
+}
+
+void IspisOpreme(vector <string> oprema)
+{
+
+    for(auto i=oprema.begin(); i!= oprema.end(); i++)
+    {
+
+        cout<<*i<<endl;
+
+    }
+
+}
+
+void NapraviRadnika()
+{
+
+    string ime, prezime,adresa,ostalo;
+    double plata;
+    bool html;
+    bool c_;
+    bool javascript;
+    bool java;
+    bool css;
+    bool bazePodataka;
+
+
+    cout<<"Unesite ime : "<<endl;
+    cin>>ime;
+    cout<<"Unesi prezime : "<<endl;
+    cin>>prezime;
+    cout<<"Unesi adresu"<<endl;
+    cin>>adresa;
+    cout<<"Unesi platu";
+    cin>>plata;
+    cout<<"Kvalifikacije radnika"<<endl;
+    cout<<"Unesi 1 ako radnik zna Html ili 0 ako ne zna";
+    cin>>html;
+    cout<<"Unesi 1 ako radnik zna C ili 0 ako ne zna";
+    cin>>c_;
+    cout<<"Unesi 1 ako radnik zna JavaSripts ili 0 ako ne zna";
+    cin>>javascript;
+    cout<<"Unesi 1 ako radnik zna Java ili 0 ako ne zna";
+    cin>>java;
+    cout<<"Unesi 1 ako radnik zna CSS ili 0 ako ne zna";
+    cout<<"Unesi 1 ako radnik zna BazePodataka ili 0 ako ne zna";
+    cin>>bazePodataka;
+    cout<<"Ostalo : ";
+    cin>>ostalo;
+    cout<<"Unesite znanje radnika (junior=0, medior=1, senior=2)";
+
+
+    Kvalifikacije kva(html,c_,javascript,java,css,bazePodataka,ostalo);
+    Radnik r(ime,prezime,adresa,kva,junior,plata);
+
+
+    if(r.PostojiRadnikUFajlu()==false)
+    {
+        r.DodajRadnikaUFajl();
+        cout<<"Uspeno je dodar radnik";
+    }
+    else
+    {
+        cout<<"Radnik vec postoji u fajlu";
+    }
+
+
+
+}
+
+void NapraviKlijenta()
+{
+
+    string naziv;
+    string adresa;
+    string kontaktTelefon;
+    string email;
+    int tip;
+
+    cout<<"Unesite naziv klijenta : "<<endl;
+    cin>>naziv;
+    cout<<"Unesite adresu klijenta : "<<endl;
+    cin>>adresa;
+    cout<<"Unesite kontakt telefon : "<<endl;
+    cin>>kontaktTelefon;
+    cout<<"Unesite email"<<endl;
+    cin>>email;
+    cout<<"Unesite tim preduzeca (malo=0,srednje=1, veliko=2) ";
+    cin>>tip;
+    TipPreduzeca val = static_cast<TipPreduzeca>(tip);
+
+    Klijenti k(naziv,adresa,kontaktTelefon,email,val);
+
+    if(k.PostojiKlijentUFajlu()==false)
+    {
+        k.DodajKlijentaUFajl();
+        cout<<"Uspeno je dodat klijenat";
+    }
+    else
+    {
+        cout<<"Klijenat vec postoji u fajlu";
+    }
+
+
+
+
+}
+
+void NapraviProjekat()
+{
+
+    string naziv,rok;
+    double budzet;
+
+    cout<<"Unesite naziv projekta : "<<endl;
+    cin>>naziv;
+    cout<<"Unesite budzet projekta : "<<endl;
+    cin>>budzet;
+    cout<<"Unesite rok projekta : "<<endl;
+    cin>>rok;
+
+    Projekti pro(naziv,budzet,rok);
+
+
+
+    if(pro.PostojiProjekatUFajlu()==false)
+    {
+        pro.DodajProjekatUFajl();
+        cout<<"Uspeno je dodat klijenat";
+    }
+    else
+    {
+        cout<<"Klijenat vec postoji u fajlu";
+    }
+
+}
+
+void NapraviOpremu()
+{
+
+    string naziv;
+    bool vrsta;
+
+    cout<<"Unesite naziv Opreme : "<<endl;
+    cin>>naziv;
+    cout<<"Unesite vrstu opreme (1-softver, 0- hardver) : "<<endl;
+    cin>>vrsta;
+
+    Oprema pro(naziv,vrsta);
+
+
+
+    if(pro.PostojiOpremaUFajlu()==false)
+    {
+        pro.DodajOpremuUFajl();
+        cout<<"Uspeno je dodata oprema";
+    }
+    else
+    {
+        cout<<"Oprema vec postoji u fajlu";
+    }
+
+}
+
+
+
+void IspisiPrihode(vector <string> prihodi)
+{
+
+    for(auto i=prihodi.begin(); i!= prihodi.end(); i++)
+    {
+
+        cout<<*i<<endl;
+
+    }
+
+}
+
+void IspisiRashode(vector <string> rashodi)
+{
+
+    for(auto i=rashodi.begin(); i!= rashodi.end(); i++)
+    {
+
+        cout<<*i<<endl;
+
+    }
+
+}
+
+void ObracunajPlate(vector <string> radnici)
+{
+    double ukupno;
+    for(int i=0; i< radnici.size(); i++)
+    {
+        if ((i+1) %6 == 0)
+        {
+           ukupno += atof(radnici[i].c_str());
+        }
+    }
+
+   Rashodi r("Plate",ukupno);
+   r.DodajRashodeUFajl();
+
+   cout<<"Obracun Plata : ";
+   cout<<ukupno<<endl;
+}
+
+void IzracunajDobit(vector <string> prihodi, vector <string> rashodi)
+{
+    double prih;
+    double rash;
+
+    for(int i=0; i< prihodi.size(); i++)
+    {
+        if ((i+1) %2 == 0)
+        {
+            prih += atof(prihodi[i].c_str());
+        }
+    }
+
+    for(int i=0; i< rashodi.size(); i++)
+    {
+        if ((i+1) %2 == 0)
+        {
+            rash += atof(rashodi[i].c_str());
+        }
+    }
+
+    cout<<"Prohodi : ";
+    cout<<prih<<endl;
+
+    cout<<"Rashodi : ";
+    cout<<rash<<endl;
+
+    cout<<"-----------------------------"<<endl;
+
+    cout<<"Dobit : ";
+    cout<<prih - rash<<endl;
+
+}
+
 
 
 int main()
 {
-    Kvalifikacije FrontEndProgramer(true,false,true,false,true,false,"balbal");
-    Kvalifikacije Programer(true,true,true,true,true,true,"balbal");
-
-    Radnik Pera("Pera","Peric","Negde daleko",FrontEndProgramer,junior,5.45);
-
-    cout<<"Plata od: "<<Pera.getIme()<<" je "<<Pera.getPlata()<<"e"<<endl;
-
-    Radnik Miki("Miki","Peric","Negde daleko od kuce",FrontEndProgramer,medior,10.45);
-
-    Radnik Stefan("Stefan","K","Negde daleko od kuce",Programer,senior,15.45);
-
-
-
-    vector<Radnik> r;
-    r.push_back(Pera);
-    r.push_back(Stefan);
-    r.push_back(Miki);
-    Timovi timA("Tim A", r);
-
-    timA.setRadnici(r);
-
-
-    cout<<"Naziv tima je "<<timA.getNaziv()<<endl;
-
-    cout<<"Broj clanova je: "<<timA.brojClanova()<<endl;
-
-    VodjaTima StefanVT1(Stefan,timA,8,10);
-    cout<<"Rejting vodje tima A je "<<StefanVT1.Rejting()<<endl;
-
-    Timovi timB("Tim B",r);
-    VodjaTima vodjaTima2(timB,7,10,"Stefan","K","",Programer,senior,12);
-    cout<<"Rejting vodje tima B je "<<vodjaTima2.Rejting()<<endl;
-
-
-    cout<<"Vodja tima 1 ima realizovanih projekata: "<<StefanVT1.getRealizovaniProjekti()<<endl;
-    cout<<"Vodja tima 1 ima ukupno projekata projekata: "<<StefanVT1.getUkupnoProjekata()<<endl;
-    cout<<"Rejting vodje tima 1 je "<<StefanVT1.Rejting()<<endl;
-    StefanVT1.dodajRealizovaneProjekte(2);
-    cout<<"Vodja tima 1 ima realizovanih projekata: "<<StefanVT1.getRealizovaniProjekti()<<endl;
-    cout<<"Vodja tima 1 ima ukupno projekata projekata: "<<StefanVT1.getUkupnoProjekata()<<endl;
-    cout<<"Rejting vodje tima A je "<<StefanVT1.Rejting()<<endl;
-    StefanVT1.IzracunajPlatu(20000);
-
-    Stefan.IzracunajPlatu(111);
-
-
-    StefanVT1.dodajNerealizovaneProjekte(200);
-    cout<<"Vodja tima 1 ima realizovanih projekata: "<<StefanVT1.getRealizovaniProjekti()<<endl;
-    cout<<"Vodja tima 1 ima ukupno projekata projekata: "<<StefanVT1.getUkupnoProjekata()<<endl;
-    cout<<"Rejting vodje tima A je "<<StefanVT1.Rejting()<<endl;
-
-    cout<<"Stefan vodja ima platu: "<<StefanVT1.getPlata()<<endl;
-    cout<<"Stefan radnik ima platu: "<<Stefan.getPlata()<<endl;
-
-    StefanVT1.setKoefPlata(Stefan.getKoefPlata()+30);
-    cout<<"Stefan vodja ima platu: "<<StefanVT1.getPlata()<<endl;
-
-    cout<<"Stefan vodja tima 1 ima koef plate: "<<StefanVT1.getKoefPlata()<<endl;
-    cout<<"Stefan vodja tima 1 ima rejting: "<<StefanVT1.Rejting()<<endl;
-    cout<<"Stefan vodja tima 1 ima real projekata: " <<StefanVT1.getRealizovaniProjekti()<<endl;
-    StefanVT1.dodajRealizovaneProjekte(1000);
-    cout<<"Stefan vodja tima 1 ima real projekata: " <<StefanVT1.getRealizovaniProjekti()<<endl;
-    cout<<"Stefan vodja tima 1 ima rejting: "<<StefanVT1.Rejting()<<endl;
-    StefanVT1.Bonus(StefanVT1.Rejting());
-    cout<<"Stefan vodja tima 1 ima koef plate: "<<StefanVT1.getKoefPlata()<<endl;
-
-
+    vector <string> klijenti=split2("Klijenti.txt");
+    vector <string> radnici=split2("Radnici.txt");
+    vector <string> projekti=split2("Projekat.txt");
+    vector <string> oprema=split2("Oprema.txt");
+    vector <string> prihodi=split2("Prihodi.txt");
+    vector <string> rashodi=split2("Rashodi.txt");
 
     //Uvesti sve kancelarije kojima ce raspolagati kompanija.
 
@@ -131,41 +388,10 @@ int main()
     //Od konkretnih funkcionalosti program ce posedovati npr, izracunavanje plate svakog pojedinacnog radnika, izracunavanje kranje dobiti u svakom trenutku, izracunavanjee dobiti u buducnosti ako firma nastavi u odredjenom smeru, upozoravati ako je odredjena licenca za softver pri kraju, ako klijenat kasni sa uplacivanjem, ako vodja tima ima los rejting ili ima rejting iznad proseka da se nagradi s odredjenim bonusima. Bukvalno ce raditi sve automatizovaano za jednu IT-firmu da se ne bi desilo da ista promakne i da ta firma ide u svom najbolljem mogucem smeru.
 
 
-    Klijenti Samsung("samsungg","Amerika","44455","samo@ffice.com",veliko);
-    Klijenti LG("LG","Amerika","22222","LG@tralaala.com",malo);
-    Klijenti Nokia("Nokia","Daleka proslost","231231231","nekadbilapopularna@proslost.com",veliko);
-
-    if(!Samsung.PostojiKlijentUFajlu())
-        Samsung.DodajKlijentaUFajl();
-
-    if(!LG.PostojiKlijentUFajlu())
-        LG.DodajKlijentaUFajl();
-
-    if(!Nokia.PostojiKlijentUFajlu())
-        Nokia.DodajKlijentaUFajl();
 
 
 
-
-    citajTxt("Klijenti.txt");
-
-    cout << "Ukupno zaposlenih(primer staticnog polja): " << Radnik::ukupnoZaposlenih<< endl;
-
-    cout<<Stefan<<endl;
-    cout<<StefanVT1<<endl;
-    cout<<Samsung<<endl;
-
-
-    for(int i=0; i<10;i++){
-    cout<<endl;};
-    HardverskaOprema h(10, 2, true, "Hardver", true);
-    h.VrstaOpreme();
-    cout<<endl;
-
-
-    Oprema o("Aparat za kafu",false);
-    SoftverskiAlati s("Alat", "Verzija 2.0", true);
-    SoftverskiAlati s1("alat", "Verzija 1.0", true);
+//    SoftverskiAlati s("Alat", "Verzija 2.0", true, true);
 
 
     /*s.dodavanjeOpreme(s);
@@ -180,160 +406,235 @@ int main()
 
     //
 
-    Oprema* o2=&s;
-    o2->VrstaOpreme();
 
-    /*printf("Molimo Vas izaberite akciju!\n"
-        "1.Prikazi Kupce                          4.Dodaj Kupca                             7.Brisi Kupca\n"
-        "2.Prikazi Destinacije                    5.Dodaj Destinaciju                       8.Brisi Destinaciju\n"
-        "3.Prikazi Aranzmane                      6.Dodaj Aranzman                          9.Brisi Aranzman\n\n"
-
-        "0.Izlaz"
-
-                                        );
+    /*  Oprema* o2=&s;
+      o2->VrstaOpreme();  */
+    int choice,subChoice;
 
 
-
-    int n = -1;
-    while (n != 0)
+    do
     {
-        printf("\n> ");
-
-        scanf("%d", &n);
 
 
-        switch (n)
+        cout << endl
+             << " 1 - Klijenti"<<endl
+             << " 2 - Projekti"<<endl
+             << " 3 - Oprema"<<endl
+             << " 4 - Radnici"<<endl
+             << " 5 - Dobit"<<endl
+             << " 0 - Izlaz iz programa"<<endl
+             << " Odaberite opciju: "<<endl;
+        cin >> choice;
+
+        switch (choice)
         {
-        case PrikaziKupce:
-            printf("Podaci o kupcima: \n");
-            PrikaziPodatkeOKupcima();
+        case 1:
+            do
+            {
+                cout<<endl
+                    << " 1 - Lista klijenata"<<endl
+                    << " 2 - Unos novog klijenta "<<endl
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju : ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+                    IspisKlijenata(klijenti);
+                    break;
+
+                case 2:
+                    NapraviKlijenta();
+                    break;
+                }
+
+
+            }
+            while (subChoice !=9);
 
             break;
-        case PrikaziDestinacije:
-            printf("Podaci o destinacijama: \n");
-             PrikaziPodatkeODestinacijama();
+        case 2:
+
+            do
+            {
+                cout<<endl
+                    << " 1 - Lista projekata"<<endl
+                    << " 2 - Unos novog projekta "<<endl
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju : ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+
+                    IspisProjekata(projekti);
+
+                    break;
+
+                case 2:
+                    NapraviProjekat();
+                    break;
+                }
+
+            }
+            while (subChoice !=9);
+
             break;
-        case PrikaziAranzmane:
-            printf("Podaci o aranzmanima: \n");
-            PrikaziPodatkeOAranzmanu();
+        case 3:
+
+            do
+            {
+                cout<<endl
+                    << " 1 - Lista opreme"<<endl
+                    << " 2 - Unos nove opreme "<<endl
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju : ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+
+                    IspisOpreme(oprema);
+
+                    break;
+                case 2:
+                    NapraviOpremu();
+                    break;
+                }
+
+            }
+            while (subChoice !=9);
+
             break;
-        case DodajKupca:
-            printf("Dodavanje novog kupca: \n");
-            DodajNovogKupca();
+        case 4:
+
+            do
+            {
+                cout<<endl
+                    << " 1 - Lista radnika"<<endl
+                    /*<< " 2 - Unos novog radnika "<<endl*/
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju : ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+
+                    IspisRadnika(radnici);
+
+                    break;
+
+                /*case 2:
+                    NapraviRadnika();
+                    break;*/
+
+                }
+
+            }
+            while (subChoice !=9);
+
             break;
 
-        case DodajDestinaciju:
-            printf("Dodavanje nove destinacije: \n");
-            DodajNovuDestinaciju();
-            break;
+        case 5:
 
-        case DodajAranzman:
-            printf("Dodavanje novog aranzmana: \n");
-            DodajNoviAranzman();
-            break;
 
-        case BrisiKupca:
-            printf("Brisanje kupca: \n");
-            BrisanjeKupca();
+            do
+            {
+                cout<<endl
+                    << " 1 - Prikazi prihode i njegovu vrednost"<<endl
+                    << " 2 - Prikazi rashode i njegovu vrednost "<<endl
+                    << " 3 - Obracun plata"<<endl
+                    << " 4 - Izracunaj konacnu dobit"<<endl
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju : ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+
+                    IspisiPrihode(prihodi);
+
+                    break;
+                case 2:
+
+                    IspisiRashode(rashodi);
+                    break;
+                case 3:
+                    ObracunajPlate(radnici);
+                    break;
+                case 4:
+                    IzracunajDobit(prihodi,rashodi);
+                    break;
+                }
+
+            }
+            while (subChoice !=9);
 
             break;
-
-        case BrisiDestinaciju:
-            printf("Brisanje destinacije: \n");
-            BrisanjeDestinacije();
-            break;
-
-        case BrisiAranzman:
-            printf("Brisanje aranzmana: \n");
-            break;
-        case 0:
-            printf("Izasli ste iz programa \n");
-            break;
-
 
         default:
-            printf("Nepoznata akcija\n");
+            cout << "Not a Valid Choice. \n"
+                 << "Choose again.\n";
+            break;
         }
+
     }
-*/
-    cout<<s;
-
-    Kancelarije k("Zmaj Jovina 1G",20);
-    k.dodavanjeOpreme(o);
-    cout<<k;
-
-    cout<<StefanVT1<<endl;
-    cout<<"rad";
-
-    cout<<timA.brojClanova();
-
-    //timA.dodavanjeRadnika(Stefan);
-
-    cout<<timB.brojClanova();
+    while (choice !=0);
 
 
-    cout<<Stefan;
-    cout<<StefanVT1;
+    /*     Oprema o("tako",true);
 
-    timA.clanoviTima();
+          Kancelarije k("1234",123);
+          k.dodavanjeOpreme(o);
+          cout<<k<<endl;
 
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-
-    cout<<StefanVT1;
-
-    timA.dodavanjeRadnika(Stefan);
-
-    cout<<timA<<endl;
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-
-    cout<<StefanVT1<<endl; //neradii popraviti
-
-
-    cout<<timA<<endl;
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
-
-     for(int i=0; i<10;i++){
-    cout<<endl;};
+          vector <Radnik> r;
+          Kvalifikacije kva(true,true,true,true,true,true,"ostalo");
+          Radnik a("Aleksa","Siriski","Detos",kva,senior,1.65);
 
 
 
+          Timovi timA("tima",r);
 
-    Oprema oprema22("neki naziv",true);
+          timA.dodavanjeRadnika(a);
+          cout<<timA;
+
+            cout<<endl<<endl<<endl;
+          VodjaTima b(a,timA,100,120);
+
+          cout<<b;
+          cout<<endl<<endl<<endl;
+          cout<<endl<<endl<<endl;
+
+          SoftverskiAlati sof("Aparat za kafat","2.0",false, true);
+          HardverskaOprema har(1,2,true,"bla",false);
+
+          cout<<sof;
+          cout<<har;
+
+         cout<<endl<<endl<<endl;
+          cout<<endl<<endl<<endl;
+     cout<<endl<<endl<<endl;
+          cout<<endl<<endl<<endl;
+
+          cout<<a;
+          a.imaKvalifikacije();
 
 
-    SoftverskiAlati sof("softver11","3.0",false);
 
-    cout<<sof;
+          string av;
+          string c;
 
-    HardverskaOprema har(12,4,true,"hardver",true);
+          av="lala";
 
-    cout<<har<<endl;
+          av=av+"ababa";
+
+          cout<<av<<endl;
+
+          cout<<a.imaKvalifikacije();
+
+          a.DodajRadnikaUFajl(); */
 
 
-    //ispis vodje ne radi u potrpunosti, ispis da li je hardver i softver takodje,zasto se oprema u kancelariji ispisuje kao adresa, ispis kompanije u potpunosti;
-     cout<<k;
-
-return 0;
+    return 0;
 }

@@ -58,8 +58,8 @@ void ispisOpreme()
         izlaz<<"Adresa : "<<o.adresa<<endl;
         izlaz<<"Broj radnih mesta koje kancelarija moze da podrzi: "<<o.brojRadnihMesta<<endl;
         for(auto it=o.opreme.begin();it<o.opreme.end(); it++){
-            izlaz<<"\t";
-            izlaz<<*it<<endl;
+
+            izlaz<<**it<<endl;
         }
 
 

@@ -99,35 +99,48 @@ public:
         bazePodataka=Baze;
     }
 
-    void imaKvalifikacije()
+    string imaKvalifikacije()
     {
+        string kvalifikacije= "";
+
         if(html==true)
         {
-            cout<<"HTML"<<endl;
+            kvalifikacije= kvalifikacije+ " HTML ";
         }
         if(c_==true)
         {
-            cout<<"C"<<endl;
+            kvalifikacije= kvalifikacije + " C ";
         }
         if(javascript==true)
+
         {
-            cout<<"JAVASCRIPTS"<<endl;
+            kvalifikacije += " JAVASCRIPTS ";
         }
         if(java==true)
         {
-            cout<<"JAVA"<<endl;
+            kvalifikacije= kvalifikacije +" JAVA ";
         }
         if(css==true)
         {
-            cout<<"CSS"<<endl;
+            kvalifikacije=kvalifikacije +" CSS ";
         }
         if(bazePodataka==true)
         {
-            cout<<"BAZE"<<endl;
+            kvalifikacije =kvalifikacije + " BAZE ";
         }
 
-        cout<<ostalo<<endl;
+        kvalifikacije = kvalifikacije + ostalo;
+
+
+        return kvalifikacije;
     }
+       /*     void DodajKvalifikacijeUFajl()
+   {
+        ofstream fajl;
+        fajl.open ("Radnici.txt", ios_base::app);
+        fajl << getIme() << ";" << getPrezime() << ";" << getAdresa()<< ";" << getPozicija()<<";"<<getKoefPlata()<<";"<<getPlata()<< endl;
+        fajl.close();
+    } */
 
 };
 

@@ -9,7 +9,7 @@ protected:
     bool aktivnaLicenca;
 public:
 
-SoftverskiAlati(string Naziv, string Verzija, bool al):Oprema(Naziv,vrsta){
+SoftverskiAlati(string Naziv, string Verzija, bool al, bool vrsta):Oprema(Naziv,vrsta){
     naziv=Naziv;
     verzija=Verzija;
     aktivnaLicenca=al;

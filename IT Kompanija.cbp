@@ -39,10 +39,13 @@
 		<Unit filename="Kompanija.hpp" />
 		<Unit filename="Kvalifikacije.hpp" />
 		<Unit filename="Oprema.hpp" />
+		<Unit filename="Oprema.txt" />
 		<Unit filename="Prihodi.hpp" />
+		<Unit filename="Prihodi.txt" />
 		<Unit filename="Projekti.hpp" />
 		<Unit filename="Radnik.hpp" />
 		<Unit filename="Rashodi.hpp" />
+		<Unit filename="Rashodi.txt" />
 		<Unit filename="SoftverskiAlati.hpp" />
 		<Unit filename="Timovi.hpp" />
 		<Unit filename="VodjaTima.hpp" />
