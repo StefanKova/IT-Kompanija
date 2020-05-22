@@ -96,7 +96,7 @@ virtual void VrstaOpreme(){
     {
         ofstream fajl;
         fajl.open ("Oprema.txt", ios_base::app);
-        fajl <<getNaziv() << ";" << getVrsta() << ";" << endl;
+        fajl <<getNaziv() << ";" << getVrsta()  << endl;
         fajl.close();
     }
 

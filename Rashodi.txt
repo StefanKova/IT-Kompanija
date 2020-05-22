@@ -1,3 +1,5 @@
-Mrketing;1000;
-Komunalije-Mart;2000;
-Plate;17500;
+Mrketing;1000
+Komunalije-Mart;2000
+Plate;17500
+Nesto;20000
+

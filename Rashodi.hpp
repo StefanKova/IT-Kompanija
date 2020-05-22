@@ -33,7 +33,7 @@ public:
     {
         ofstream fajl;
         fajl.open ("Rashodi.txt", ios_base::app);
-        fajl <<getNaziv() << ";" << getIznos() << ";" << endl;
+        fajl <<getNaziv() << ";" << getIznos()<< endl;
         fajl.close();
     }
 

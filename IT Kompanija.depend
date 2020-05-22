@@ -540,3 +540,155 @@
 
 1590186824 c:\users\acer\desktop\lala projekat\rashodi.hpp
 
+1590190726 source:c:\users\acer\desktop\stefan projekat\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<iostream>
+	<fstream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+
+1590180667 c:\users\acer\desktop\stefan projekat\kompanija.hpp
+	"Kancelarije.hpp"
+	<map>
+	<vector>
+
+1590180667 c:\users\acer\desktop\stefan projekat\kancelarije.hpp
+	"HardverskaOprema.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	<map>
+	<vector>
+
+1590191185 c:\users\acer\desktop\stefan projekat\hardverskaoprema.hpp
+	"Oprema.hpp"
+
+1590191069 c:\users\acer\desktop\stefan projekat\oprema.hpp
+	<vector>
+	<iostream>
+	<fstream>
+
+1590180666 c:\users\acer\desktop\stefan projekat\softverskialati.hpp
+	"Oprema.hpp"
+
+1590180667 c:\users\acer\desktop\stefan projekat\radnik.hpp
+	"Kvalifikacije.hpp"
+	<iostream>
+	"Radnik.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590180667 c:\users\acer\desktop\stefan projekat\kvalifikacije.hpp
+
+1590189883 c:\users\acer\desktop\stefan projekat\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1590189159 c:\users\acer\desktop\stefan projekat\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+	"Klijenti.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590180667 c:\users\acer\desktop\stefan projekat\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1590181455 c:\users\acer\desktop\stefan projekat\klijenti.hpp
+	<iostream>
+	<fstream>
+
+1590180667 c:\users\acer\desktop\stefan projekat\prihodi.hpp
+
+1590191069 c:\users\acer\desktop\stefan projekat\rashodi.hpp
+
+1590190726 source:c:\users\acer\desktop\skoro gotov projekatt\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<iostream>
+	<fstream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+
+1590180667 c:\users\acer\desktop\skoro gotov projekatt\kompanija.hpp
+	"Kancelarije.hpp"
+	<map>
+	<vector>
+
+1590180667 c:\users\acer\desktop\skoro gotov projekatt\kancelarije.hpp
+	"HardverskaOprema.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	<map>
+	<vector>
+
+1590191185 c:\users\acer\desktop\skoro gotov projekatt\hardverskaoprema.hpp
+	"Oprema.hpp"
+
+1590191069 c:\users\acer\desktop\skoro gotov projekatt\oprema.hpp
+	<vector>
+	<iostream>
+	<fstream>
+
+1590180666 c:\users\acer\desktop\skoro gotov projekatt\softverskialati.hpp
+	"Oprema.hpp"
+
+1590180667 c:\users\acer\desktop\skoro gotov projekatt\radnik.hpp
+	"Kvalifikacije.hpp"
+	<iostream>
+	"Radnik.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590180667 c:\users\acer\desktop\skoro gotov projekatt\kvalifikacije.hpp
+
+1590189883 c:\users\acer\desktop\skoro gotov projekatt\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1590189159 c:\users\acer\desktop\skoro gotov projekatt\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+	"Klijenti.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590180667 c:\users\acer\desktop\skoro gotov projekatt\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1590181455 c:\users\acer\desktop\skoro gotov projekatt\klijenti.hpp
+	<iostream>
+	<fstream>
+
+1590180667 c:\users\acer\desktop\skoro gotov projekatt\prihodi.hpp
+
+1590191069 c:\users\acer\desktop\skoro gotov projekatt\rashodi.hpp
+

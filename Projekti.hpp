@@ -16,14 +16,16 @@ protected:
     VodjaTima vodja;
     string rok;
 public:
-    Projekti(string Naziv, double Budzet, Klijenti Klijenat,VodjaTima Vodja,string Rok){
+    Projekti(string Naziv, double Budzet, Klijenti Klijenat,VodjaTima Vodja,string Rok)
+    {
         naziv=Naziv;
         budzet=Budzet;
         klijenat=Klijenat;
         vodja=Vodja;
         rok=Rok;
     }
-    Projekti(string Naziv,double Budzet, string Rok){
+    Projekti(string Naziv,double Budzet, string Rok)
+    {
 
         naziv=Naziv;
         budzet=Budzet;
@@ -31,39 +33,49 @@ public:
 
 
     }
-     string getNaziv(){
+    string getNaziv()
+    {
         return naziv;
-     }
-      string getRok(){
+    }
+    string getRok()
+    {
         return rok;
-     }
-     double getBudzet(){
+    }
+    double getBudzet()
+    {
         return budzet;
-     }
-     Klijenti getKlijenat(){
+    }
+    Klijenti getKlijenat()
+    {
         return klijenat;
-     }
-     VodjaTima getVodja(){
+    }
+    VodjaTima getVodja()
+    {
         return vodja;
-     }
+    }
 
-     void setNaziv(string Naziv){
+    void setNaziv(string Naziv)
+    {
         naziv=Naziv;
-     }
-     void setBudzet(double Budzet){
+    }
+    void setBudzet(double Budzet)
+    {
         budzet=Budzet;
-     }
-    void setKlijenat(Klijenti K){
+    }
+    void setKlijenat(Klijenti K)
+    {
         klijenat=K;
     }
-    void setRok(string Rok){
+    void setRok(string Rok)
+    {
         rok=Rok;
     }
-    void setVodja(VodjaTima Vodja){
+    void setVodja(VodjaTima Vodja)
+    {
         vodja=Vodja;
     }
 
-            bool PostojiProjekatUFajlu()
+    bool PostojiProjekatUFajlu()
     {
         string linija;
         string nazivIzFajla;
@@ -93,7 +105,7 @@ public:
 
         return true;
     }
-           void DodajProjekatUFajl()
+    void DodajProjekatUFajl()
     {
         ofstream fajl;
         fajl.open ("Projekat.txt", ios_base::app);

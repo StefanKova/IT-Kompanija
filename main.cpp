@@ -126,6 +126,18 @@ void IspisOpreme(vector <string> oprema)
 
 }
 
+void IspisiTim(vector <string> tim)
+{
+
+    for(auto i=tim.begin(); i!= tim.end(); i++)
+    {
+
+        cout<<*i<<endl;
+
+    }
+
+}
+
 void NapraviRadnika()
 {
 
@@ -237,14 +249,14 @@ void NapraviProjekat()
 
 
 
-    if(pro.PostojiProjekatUFajlu()==false)
+    if(pro.PostojiProjekatUFajlu())
     {
         pro.DodajProjekatUFajl();
-        cout<<"Uspeno je dodat klijenat";
+        cout<<"Uspeno je dodat projekat";
     }
     else
     {
-        cout<<"Klijenat vec postoji u fajlu";
+        cout<<"Projekat vec postoji u fajlu";
     }
 
 }
@@ -309,15 +321,15 @@ void ObracunajPlate(vector <string> radnici)
     {
         if ((i+1) %6 == 0)
         {
-           ukupno += atof(radnici[i].c_str());
+            ukupno += atof(radnici[i].c_str());
         }
     }
 
-   Rashodi r("Plate",ukupno);
-   r.DodajRashodeUFajl();
+    Rashodi r("Plate",ukupno);
+    r.DodajRashodeUFajl();
 
-   cout<<"Obracun Plata : ";
-   cout<<ukupno<<endl;
+    cout<<"Obracun Plata : ";
+    cout<<ukupno<<endl;
 }
 
 void IzracunajDobit(vector <string> prihodi, vector <string> rashodi)
@@ -327,7 +339,7 @@ void IzracunajDobit(vector <string> prihodi, vector <string> rashodi)
 
     for(int i=0; i< prihodi.size(); i++)
     {
-        if ((i+1) %2 == 0)
+        if ((i+1) % 2 == 0)
         {
             prih += atof(prihodi[i].c_str());
         }
@@ -335,7 +347,7 @@ void IzracunajDobit(vector <string> prihodi, vector <string> rashodi)
 
     for(int i=0; i< rashodi.size(); i++)
     {
-        if ((i+1) %2 == 0)
+        if ((i+1) % 2 == 0)
         {
             rash += atof(rashodi[i].c_str());
         }
@@ -364,6 +376,7 @@ int main()
     vector <string> oprema=split2("Oprema.txt");
     vector <string> prihodi=split2("Prihodi.txt");
     vector <string> rashodi=split2("Rashodi.txt");
+    vector <string> timovi=split2("Timovi.txt");
 
     //Uvesti sve kancelarije kojima ce raspolagati kompanija.
 
@@ -421,7 +434,8 @@ int main()
              << " 2 - Projekti"<<endl
              << " 3 - Oprema"<<endl
              << " 4 - Radnici"<<endl
-             << " 5 - Dobit"<<endl
+             << " 5 - Timovi"<<endl
+             << " 6 - Dobit"<<endl
              << " 0 - Izlaz iz programa"<<endl
              << " Odaberite opciju: "<<endl;
         cin >> choice;
@@ -524,9 +538,9 @@ int main()
 
                     break;
 
-                /*case 2:
-                    NapraviRadnika();
-                    break;*/
+                    /*case 2:
+                        NapraviRadnika();
+                        break;*/
 
                 }
 
@@ -534,8 +548,31 @@ int main()
             while (subChoice !=9);
 
             break;
-
         case 5:
+
+
+            do
+            {
+                cout<<endl
+                    << " 1 - Prikazi timove : "<<endl
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju : ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+
+                    IspisiTim(timovi);
+
+                    break;
+                }
+
+            }
+            while (subChoice !=9);
+
+            break;
+
+        case 6:
 
 
             do

@@ -10,19 +10,22 @@ protected:
     bool uUpotrebi;
 
 public:
-HardverskaOprema(int bk, int st, bool uU, string n, bool V):Oprema( n, V)
-{
-    brojKomada=bk;
-    starost=st;
-    uUpotrebi=uU;
-}
-void VrstaOpreme()
-{
-    Oprema::VrstaOpreme();
-    cout<<" i starost ove komponente je "<<starost<<" godine"<<endl;
-}
+    HardverskaOprema(int bk, int st, bool uU, string n, bool V):Oprema( n, V)
+    {
+        brojKomada=bk;
+        starost=st;
+        uUpotrebi=uU;
+    }
+    void VrstaOpreme()
+    {
+        Oprema::VrstaOpreme();
+        cout<<" i starost ove komponente je "<<starost<<" godine"<<endl;
+    }
 
-int identifikacija(){return false;}
+    int identifikacija()
+    {
+        return false;
+    }
 
 };
 
