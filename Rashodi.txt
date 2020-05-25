@@ -3,3 +3,4 @@ Komunalije-Mart;2000
 Plate;17500
 Nesto;20000
 
+Plate;17500

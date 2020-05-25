@@ -11,12 +11,12 @@ class Projekti
 
 protected:
     string naziv;
-    double budzet;
+    int budzet;
     Klijenti klijenat;
     VodjaTima vodja;
     string rok;
 public:
-    Projekti(string Naziv, double Budzet, Klijenti Klijenat,VodjaTima Vodja,string Rok)
+    Projekti(string Naziv, int Budzet, Klijenti Klijenat,VodjaTima Vodja,string Rok)
     {
         naziv=Naziv;
         budzet=Budzet;
@@ -24,13 +24,12 @@ public:
         vodja=Vodja;
         rok=Rok;
     }
-    Projekti(string Naziv,double Budzet, string Rok)
+    Projekti(string Naziv,int Budzet, string Rok)
     {
 
         naziv=Naziv;
         budzet=Budzet;
         rok=Rok;
-
 
     }
     string getNaziv()
@@ -41,7 +40,7 @@ public:
     {
         return rok;
     }
-    double getBudzet()
+    int getBudzet()
     {
         return budzet;
     }
@@ -58,7 +57,7 @@ public:
     {
         naziv=Naziv;
     }
-    void setBudzet(double Budzet)
+    void setBudzet(int Budzet)
     {
         budzet=Budzet;
     }

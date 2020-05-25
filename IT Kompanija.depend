@@ -692,3 +692,79 @@
 
 1590191069 c:\users\acer\desktop\skoro gotov projekatt\rashodi.hpp
 
+1590447377 source:c:\users\stefaa\desktop\skoro gotov projekatt\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<iostream>
+	<fstream>
+	"Kompanija.hpp"
+	"Kancelarije.hpp"
+	"Radnik.hpp"
+	"Timovi.hpp"
+	"Projekti.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	"Klijenti.hpp"
+	"Prihodi.hpp"
+	"Rashodi.hpp"
+	"Kvalifikacije.hpp"
+	"VodjaTima.hpp"
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\kompanija.hpp
+	"Kancelarije.hpp"
+	<map>
+	<vector>
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\kancelarije.hpp
+	"HardverskaOprema.hpp"
+	"SoftverskiAlati.hpp"
+	"Oprema.hpp"
+	<map>
+	<vector>
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\hardverskaoprema.hpp
+	"Oprema.hpp"
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\oprema.hpp
+	<vector>
+	<iostream>
+	<fstream>
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\softverskialati.hpp
+	"Oprema.hpp"
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\radnik.hpp
+	"Kvalifikacije.hpp"
+	<iostream>
+	"Radnik.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\kvalifikacije.hpp
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\timovi.hpp
+	"Radnik.hpp"
+	<vector>
+
+1590410412 c:\users\stefaa\desktop\skoro gotov projekatt\projekti.hpp
+	"Timovi.hpp"
+	"VodjaTima.hpp"
+	"Klijenti.hpp"
+	<vector>
+	<iostream>
+	<fstream>
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\vodjatima.hpp
+	"Radnik.hpp"
+	"Timovi.hpp"
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\klijenti.hpp
+	<iostream>
+	<fstream>
+
+1590443189 c:\users\stefaa\desktop\skoro gotov projekatt\prihodi.hpp
+
+1590408150 c:\users\stefaa\desktop\skoro gotov projekatt\rashodi.hpp
+

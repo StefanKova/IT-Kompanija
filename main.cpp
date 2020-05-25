@@ -20,6 +20,55 @@ using namespace std;
 #include "VodjaTima.hpp"
 
 
+vector <Prihodi> prihodi1;
+
+void ListaPrihoda()
+{
+    if(prihodi1.empty())
+    {
+        cout << "Prihod ne postoji.\n";
+        return;
+    }
+        cout<<"Ispis prihoda :   "<<endl;
+    for(auto i=prihodi1.begin(); i!=prihodi1.end(); i++)
+        cout<<"Naziv: "<<i->getNaziv()<<" Iznos: "<<i->getIznos()<<endl;
+
+}
+
+
+void UcitajPrihode()
+{
+    ifstream file("Prihodi1.txt");
+    if (file.is_open())
+    {
+        string Naziv,sIznos;
+        while(!file.eof())
+        {
+            file>>Naziv>>sIznos;
+            if(file.eof()) break;
+            Prihodi p(Naziv,stod(sIznos));
+            prihodi1.push_back(p);
+        }
+        file.close();
+
+    }
+
+}
+
+
+void SacuvajPrihode()
+{
+    ofstream file("IzmenjeniPrihodi.txt");
+    for(auto i=prihodi1.begin(); i!=prihodi1.end(); i++)
+    {
+        file<<(i)->getNaziv()<<" ";
+        file<<(i)->getIznos()<<endl;
+
+    }
+    file.close();
+}
+
+
 
 
 vector<string> splitSen(string str, char c=';')
@@ -353,7 +402,7 @@ void IzracunajDobit(vector <string> prihodi, vector <string> rashodi)
         }
     }
 
-    cout<<"Prohodi : ";
+    cout<<"Prihodi : ";
     cout<<prih<<endl;
 
     cout<<"Rashodi : ";
@@ -365,6 +414,98 @@ void IzracunajDobit(vector <string> prihodi, vector <string> rashodi)
     cout<<prih - rash<<endl;
 
 }
+vector<Projekti> citajTxt1(string nazivFajla)
+{
+    string linija;
+    ifstream fajl (nazivFajla);
+    vector<Projekti> projekti;
+    if (fajl.is_open())
+    {
+        while ( getline (fajl,linija) )
+        {
+            vector<string> rez;
+            rez = splitSen(linija);
+            Projekti p(rez[0], stoi(rez[1]), rez[2]);
+            projekti.push_back(p);
+        }
+        fajl.close();
+        return projekti;
+
+    }
+
+    else
+        cout << "Neuspesno otvoren fajl";
+}
+
+void prikaziTimoveIRadnike(vector <string> radnici,vector <string> tim)
+{
+
+
+
+
+    for(auto i=radnici.begin(); i!= radnici.end(); i++)
+    {
+        cout<<*i<<endl;
+
+    }
+
+
+    cout<<endl<<endl<<endl<<endl;
+
+
+
+
+    for(auto i=tim.begin(); i!= tim.end(); i++)
+    {
+
+        cout<<*i<<endl;
+
+    }
+
+}
+
+void IzmenaPrihoda()
+{
+    ListaPrihoda();
+
+    cout<<"Unesite naziv prihoda koji zelite izmeniti"<<endl<<endl<<endl;
+    string naz;
+    cin>>naz;
+
+
+    for(auto i=prihodi1.begin(); i!=prihodi1.end(); i++)
+
+
+    {
+        if(naz==i->getNaziv())
+        {
+            cout<<"Sta zelite da izmenite?"<<endl;
+            cout<<"1 Naziv"<<endl;
+            cout<<"2 Iznos"<<endl;
+            int promena;
+            cin>>promena;
+            if(promena==1)
+            {
+                cout<<"Novi naziv: ";
+                string naziv;
+                cin>>naziv;
+                i->setNaziv(naziv);
+            }
+            else
+            {
+                cout<<"Novi iznos: ";
+                int iznos;
+                cin>>iznos;
+                i->setIznos(iznos);
+            }
+        }
+    }
+
+    SacuvajPrihode();
+
+
+}
+
 
 
 
@@ -375,8 +516,14 @@ int main()
     vector <string> projekti=split2("Projekat.txt");
     vector <string> oprema=split2("Oprema.txt");
     vector <string> prihodi=split2("Prihodi.txt");
+    UcitajPrihode();
     vector <string> rashodi=split2("Rashodi.txt");
     vector <string> timovi=split2("Timovi.txt");
+
+
+
+
+
 
     //Uvesti sve kancelarije kojima ce raspolagati kompanija.
 
@@ -435,7 +582,8 @@ int main()
              << " 3 - Oprema"<<endl
              << " 4 - Radnici"<<endl
              << " 5 - Timovi"<<endl
-             << " 6 - Dobit"<<endl
+             << " 6 - Izmena"<<endl
+             << " 7 - Dobit"<<endl
              << " 0 - Izlaz iz programa"<<endl
              << " Odaberite opciju: "<<endl;
         cin >> choice;
@@ -474,6 +622,7 @@ int main()
                 cout<<endl
                     << " 1 - Lista projekata"<<endl
                     << " 2 - Unos novog projekta "<<endl
+                    << " 3 - Napravi projekte od fajla"<<endl
                     << " 9 - Vrati se na prethodnu stranu"<<endl
                     << " Odaberite opciju : ";
                 cin>>subChoice;
@@ -488,6 +637,12 @@ int main()
                 case 2:
                     NapraviProjekat();
                     break;
+
+                case 3:
+                    vector <Projekti> pro=citajTxt1("Projekat.txt");
+                    cout<<"Uspesno ste napravili projekat"<<endl;
+                    break;
+
                 }
 
             }
@@ -555,6 +710,7 @@ int main()
             {
                 cout<<endl
                     << " 1 - Prikazi timove : "<<endl
+                    << " 2 - Prikazi radnike i timove zajedno"<<endl
                     << " 9 - Vrati se na prethodnu stranu"<<endl
                     << " Odaberite opciju : ";
                 cin>>subChoice;
@@ -565,6 +721,9 @@ int main()
                     IspisiTim(timovi);
 
                     break;
+                case 2:
+                    prikaziTimoveIRadnike(radnici,timovi);
+                    break;
                 }
 
             }
@@ -573,6 +732,30 @@ int main()
             break;
 
         case 6:
+
+
+            do
+            {
+                cout<<endl
+                    << " 1 - Izmeni prihode : "<<endl
+                    << " 9 - Vrati se na prethodnu stranu"<<endl
+                    << " Odaberite opciju :  ";
+                cin>>subChoice;
+                switch(subChoice)
+                {
+                case 1:
+
+                    IzmenaPrihoda();
+
+                    break;
+                }
+
+            }
+            while (subChoice !=9);
+
+            break;
+
+        case 7:
 
 
             do

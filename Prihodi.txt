@@ -1,3 +1,2 @@
-Kasa;100000
+Kasa;10
 Silos;25000
-Voda;10000
